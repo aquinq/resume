@@ -1,0 +1,11 @@
+@keyframes rotate-90deg {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes transparency-fade-in-out {
+  50% {
+    opacity: 1;
+  }
+}
