@@ -1,0 +1,17 @@
+.home-page {
+  @extend %display-flex-column;
+  @extend %height-100pc;
+  @extend %width-100pc;
+
+  &.light {
+    background-color: $home-background-color-light;
+  }
+
+  &.dark {
+    background-color: $home-background-color-dark;
+  }
+
+  > * {
+    @extend %flex-grow-1;
+  }
+}

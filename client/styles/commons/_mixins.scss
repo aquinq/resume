@@ -1,0 +1,11 @@
+@mixin right-arrow($size, $main-color, $side-color) {
+  border-top: $size solid $side-color;
+  border-bottom: $size solid $side-color;
+  border-left: $size solid $main-color;
+}
+
+@mixin left-arrow($size, $main-color, $side-color) {
+  border-top: $size solid $side-color;
+  border-bottom: $size solid $side-color;
+  border-right: $size solid $main-color;
+}

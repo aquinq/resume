@@ -2,4 +2,9 @@
 @import "commons/commons";
 @import "commons/inheritance";
 @import "commons/keyframes";
+@import "commons/mixins";
 @import "commons/variables";
+
+// Components
+@import "components/home";
+@import "components/timeline";
