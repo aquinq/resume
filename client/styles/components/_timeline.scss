@@ -1,0 +1,39 @@
+.timeline {
+  @extend %display-flex-center;
+
+  > * {
+    @extend %display-flex-center-y;
+    @extend %height-100pc;
+  }
+
+  #timeline-start {
+    padding-left: 16px;
+
+    #timeline-start-point {
+      background-color: $timeline-background-color;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  #timeline-main-axis {
+    @extend %flex-grow-1;
+    @extend %position-relative;
+
+    #timeline-main-axis-body {
+      @extend %width-100pc;
+      background-color: $timeline-background-color;
+      height: 16px;
+    }
+  }
+
+  #timeline-end {
+    padding-right: 16px;
+
+    #timeline-end-point {
+      @include right-arrow(8px, $timeline-background-color, transparent);
+    }
+  }
+}

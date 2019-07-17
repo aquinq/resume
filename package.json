@@ -1,21 +1,21 @@
 {
-  "name": "template-app",
+  "name": "resume",
   "version": "1.0.0",
-  "description": "Template App",
+  "description": "Resume",
   "main": "boot.js",
   "scripts": {
-    "dev": "node boot.js"
+    "start": "node boot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aquinq/template-app.git"
+    "url": "git+https://github.com/aquinq/resume.git"
   },
   "author": "Antoine Quinquenel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aquinq/template-app/issues"
+    "url": "https://github.com/aquinq/resume/issues"
   },
-  "homepage": "https://github.com/aquinq/template-app#readme",
+  "homepage": "https://github.com/aquinq/resume#readme",
   "dependencies": {
     "@types/react": "^16.8.23",
     "@types/react-router-dom": "^4.3.4",

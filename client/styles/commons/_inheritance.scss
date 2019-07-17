@@ -104,6 +104,10 @@
   flex-direction: row;
 }
 
+%flex-grow-1 {
+  flex-grow: 1;
+}
+
 %font-weight-200 {
   font-weight: 200;
 }
