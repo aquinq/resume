@@ -2,7 +2,10 @@
 $wwwroot: "./../../../wwwroot";
 $img_root: $wwwroot + "/img";
 
-// colors
+// home
 $home-background-color-dark: #24282f;
 $home-background-color-light: #ffffff;
-$timeline-background-color: #334356;
+
+// timeline
+$timeline-background-color: #334356; // #334356;
+$timeline-height: 32px;

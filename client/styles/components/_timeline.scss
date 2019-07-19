@@ -1,39 +1,50 @@
 .timeline {
   @extend %display-flex-center;
 
-  > * {
-    @extend %display-flex-center-y;
-    @extend %height-100pc;
-  }
+  .timeline-container {
+    @extend %background-color-transparent;
+    @extend %display-flex-center;
+    @extend %width-100pc;
+    margin-left: 48px;
+    margin-right: 48px;
 
-  #timeline-start {
-    padding-left: 16px;
-
-    #timeline-start-point {
-      background-color: $timeline-background-color;
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
-      height: 16px;
-      width: 16px;
+    > * {
+      @extend %display-flex-center-y;
+      @extend %height-100pc;
     }
-  }
 
-  #timeline-main-axis {
-    @extend %flex-grow-1;
-    @extend %position-relative;
-
-    #timeline-main-axis-body {
-      @extend %width-100pc;
-      background-color: $timeline-background-color;
-      height: 16px;
+    #timeline-start {
+      #timeline-start-point {
+        background-color: $timeline-background-color;
+        height: $timeline-height;
+        width: 48px;
+      }
     }
-  }
 
-  #timeline-end {
-    padding-right: 16px;
+    #timeline-main-axis {
+      @extend %flex-grow-1;
+      @extend %position-relative;
 
-    #timeline-end-point {
-      @include right-arrow(8px, $timeline-background-color, transparent);
+      > * {
+        position: absolute;
+      }
+
+      #timeline-main-axis-body {
+        @extend %width-100pc;
+        background-color: $timeline-background-color;
+        height: $timeline-height;
+      }
+    }
+
+    #timeline-end {
+      #timeline-end-point {
+        background-color: $timeline-background-color;
+        height: $timeline-height;
+        width: 48px;
+      }
+      #timeline-end-arrow {
+        @include right-arrow($timeline-height / 2, $timeline-background-color, transparent);
+      }
     }
   }
 }
