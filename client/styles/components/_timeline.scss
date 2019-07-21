@@ -14,10 +14,17 @@
     }
 
     #timeline-start {
+      @extend %z-index-1;
       #timeline-start-point {
+        @extend %border-radius-50pc;
+        border: 4px solid $timeline-background-color;
+        height: 8px;
+        width: 8px;
+      }
+      #timeline-start-zone {
         background-color: $timeline-background-color;
         height: $timeline-height;
-        width: 48px;
+        width: 32px;
       }
     }
 
@@ -37,10 +44,11 @@
     }
 
     #timeline-end {
-      #timeline-end-point {
+      @extend %z-index-1;
+      #timeline-end-zone {
         background-color: $timeline-background-color;
         height: $timeline-height;
-        width: 48px;
+        width: 32px;
       }
       #timeline-end-arrow {
         @include right-arrow($timeline-height / 2, $timeline-background-color, transparent);
