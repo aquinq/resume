@@ -28,6 +28,12 @@ app.use(
 // Serve the static files from the React app using webpack config file.
 app.use(webpackConfig.output.publicPath, express.static(webpackConfig.output.path));
 
+// Serve the static font files.
+app.use(webpackConfig.output.publicPath + "fonts/", express.static(path.join(__dirname + "/client/styles/fonts")));
+
+console.log(webpackConfig.output.publicPath + "fonts");
+console.log(path.join(__dirname + "/client/styles/fonts"));
+
 const entryFile = path.join(__dirname + "/client/home.html");
 
 // Handles any requests that don't match the ones above.

@@ -1,3 +1,13 @@
+// commons
+$nightgrey: #494949;
+$darkgrey: #949494;
+$grey: #adadad;
+$lightgrey: #dadada;
+
+// animations
+$flash-cubic: cubic-bezier(0.05, 0.6, 0, 1);
+$fast-cubic: cubic-bezier(0.2, 0.5, 0.2, 0.9);
+
 // home
 $home-background-color-dark: #24282f;
 $home-background-color-light: #ffffff;
@@ -5,3 +15,8 @@ $home-background-color-light: #ffffff;
 // timeline
 $timeline-background-color: #334356; // #334356;
 $timeline-height: 32px;
+$timeline-start-zone-width: 32px;
+$timeline-end-zone-width: 32px;
+
+// experience timeline
+$experience-timeline-border: 2px solid black;

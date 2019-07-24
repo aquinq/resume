@@ -1,0 +1,35 @@
+.general-settings {
+  #general-settings-btn {
+    > .general-settings-icon {
+      @extend %cursor-pointer;
+      @include transition(all, 0.6s, $fast-cubic);
+      color: $grey;
+      font-size: 28px;
+    }
+
+    &:hover > .general-settings-icon,
+    &.open > .general-settings-icon {
+      @include rotate(90deg);
+    }
+
+    &.open > .general-settings-icon {
+      color: $nightgrey;
+    }
+  }
+
+  #general-settings-menu {
+    @extend %height-0;
+    @include transition(all, 0.6s, $flash-cubic);
+    background: red;
+    // opacity: 0;
+
+    &.open {
+      height: 40px;
+      opacity: 1;
+    }
+
+    > * {
+      @extend %height-100pc;
+    }
+  }
+}

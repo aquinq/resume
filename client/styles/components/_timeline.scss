@@ -1,57 +1,62 @@
-.timeline {
-  @extend %display-flex-center;
+.timeline-container {
+  @extend %display-flex-center-y;
+  @extend %flex-direction-column;
 
-  .timeline-container {
-    @extend %background-color-transparent;
+  .timeline-settings {
+    @extend %display-flex;
+  }
+
+  .timeline {
     @extend %display-flex-center;
+    @extend %flex-grow-1;
     @extend %width-100pc;
-    margin-left: 48px;
-    margin-right: 48px;
 
-    > * {
-      @extend %display-flex-center-y;
-      @extend %height-100pc;
-    }
-
-    #timeline-start {
-      @extend %z-index-1;
-      #timeline-start-point {
-        @extend %border-radius-50pc;
-        border: 4px solid $timeline-background-color;
-        height: 8px;
-        width: 8px;
-      }
-      #timeline-start-zone {
-        background-color: $timeline-background-color;
-        height: $timeline-height;
-        width: 32px;
-      }
-    }
-
-    #timeline-main-axis {
-      @extend %flex-grow-1;
-      @extend %position-relative;
+    .timeline-body {
+      @extend %background-color-transparent;
+      @extend %display-flex-center;
+      @extend %width-100pc;
+      margin-left: 48px;
+      margin-right: 48px;
 
       > * {
-        position: absolute;
+        @extend %display-flex-center-y;
+        @extend %height-100pc;
       }
 
-      #timeline-main-axis-body {
-        @extend %width-100pc;
-        background-color: $timeline-background-color;
-        height: $timeline-height;
+      #timeline-start {
+        @extend %z-index-1;
+        #timeline-start-zone {
+          background-color: $timeline-background-color;
+          height: $timeline-height;
+          width: $timeline-start-zone-width;
+        }
       }
-    }
 
-    #timeline-end {
-      @extend %z-index-1;
-      #timeline-end-zone {
-        background-color: $timeline-background-color;
-        height: $timeline-height;
-        width: 32px;
+      #timeline-main-axis {
+        @extend %flex-grow-1;
+        @extend %position-relative;
+
+        > * {
+          position: absolute;
+        }
+
+        #timeline-main-axis-body {
+          @extend %width-100pc;
+          background-color: $timeline-background-color;
+          height: $timeline-height;
+        }
       }
-      #timeline-end-arrow {
-        @include right-arrow($timeline-height / 2, $timeline-background-color, transparent);
+
+      #timeline-end {
+        @extend %z-index-1;
+        #timeline-end-zone {
+          background-color: $timeline-background-color;
+          height: $timeline-height;
+          width: $timeline-end-zone-width;
+        }
+        #timeline-end-arrow {
+          @include right-arrow($timeline-height / 2, $timeline-background-color, transparent);
+        }
       }
     }
   }
