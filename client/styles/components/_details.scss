@@ -1,0 +1,6 @@
+.details-container {
+  @extend %display-flex-row;
+  @extend %justify-content-space-between;
+
+  padding: 32px;
+}

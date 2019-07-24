@@ -1,11 +1,34 @@
+@mixin left-arrow($size, $main-color, $side-color) {
+  border-top: $size solid $side-color;
+  border-bottom: $size solid $side-color;
+  border-right: $size solid $main-color;
+}
+
 @mixin right-arrow($size, $main-color, $side-color) {
   border-top: $size solid $side-color;
   border-bottom: $size solid $side-color;
   border-left: $size solid $main-color;
 }
 
-@mixin left-arrow($size, $main-color, $side-color) {
-  border-top: $size solid $side-color;
-  border-bottom: $size solid $side-color;
-  border-right: $size solid $main-color;
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin skew($x, $y) {
+  -webkit-transform: skew($x, $y);
+  -moz-transform: skew($x, $y);
+  -ms-transform: skew($x, $y);
+  -o-transform: skew($x, $y);
+  transform: skew($x, $y);
+}
+
+@mixin transition($property, $duration, $ease) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
 }
