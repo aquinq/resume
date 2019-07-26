@@ -164,9 +164,9 @@ export default class Timeline extends React.PureComponent<ITimelineProps, ITimel
 
   render() {
     return (
-      <div className="timeline-wrap">
+      <div className="timeline-container">
         <div className="timeline">
-          <div className="timeline-container">
+          <div className="timeline-body">
             <div id="timeline-start">
               <div id="timeline-start-zone" />
             </div>
